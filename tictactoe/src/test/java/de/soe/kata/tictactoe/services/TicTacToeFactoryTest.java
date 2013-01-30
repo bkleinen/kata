@@ -22,6 +22,6 @@ public class TicTacToeFactoryTest {
 
     @Test
     public void testCreate() throws Exception {
-        assertThat(factory.create(aGameBoard().buildDefault()), is(Optional.<Game>absent()));
+        assertThat(factory.create(aGameBoard().buildDefault()).isPresent(), is(true));
     }
 }

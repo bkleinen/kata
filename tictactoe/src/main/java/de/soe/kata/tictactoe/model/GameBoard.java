@@ -23,7 +23,11 @@ public class GameBoard {
 
     public GameBoard() {}
 
-    public List<Field> getFields() {
+    public GameBoard(GameBoard toTest) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public List<Field> getFields() {
         return this.fields;
     }
 

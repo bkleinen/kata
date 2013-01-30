@@ -33,6 +33,7 @@ public class TicTacToeController {
 
     @RequestMapping(method= GET)
     public ModelAndView showGame(){
+    	System.out.println("GET showGame()");
         final Optional<Game> optional = this.gameRepository.find(key);
         if(optional.isPresent()) {
             final Game game = optional.get();
@@ -47,7 +48,8 @@ public class TicTacToeController {
 
     @RequestMapping(value = "play", method = POST)
     public ModelAndView playGame(@ModelAttribute(value="tictactoe") GameBoard gameBoard){
-        final Optional<Game> optional = this.gameRepository.find(key);
+       	System.out.println("POST playGame()");
+               final Optional<Game> optional = this.gameRepository.find(key);
         if(!optional.isPresent()) {
             initializeGame(gameBoard);
         } else {
