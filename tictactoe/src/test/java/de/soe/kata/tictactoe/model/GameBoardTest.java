@@ -23,14 +23,7 @@ public class GameBoardTest {
         }
     }
 
-    @Test
-    public void copyConstructorCreatesClone(){
-    	toTest.getFields().get(0).setContent("X");
-    	GameBoard clone = new GameBoard(toTest);
-    	assertThat(clone == toTest,is(false));
-    	assertThat(clone,is(toTest));
-    	
-    }
+ 
     @Test
     public void testGetFields() throws Exception {
         assertThat(toTest.getFields().size(), is(9));
